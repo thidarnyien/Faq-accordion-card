@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      height: 100vh;
+      background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    main{
+      border-radius: 20px;
+      background-color: white;
+      width: 60%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4%;
+      padding-left: 0;
+    }
+    section{
+      background: url(./images/bg-pattern-desktop.svg) no-repeat;
+      background-size: contain;
+      position: relative;
+      height: 100%; 
+    }
+    .box{
+      position: absolute;
+      top: 33%;
+      left: -26%;
+    }
+    .woman-img{
+      overflow: hidden;
+    }
+    .woman-img img{
+      margin-left: -80px;
+    }
+    .mobile{
+      display: none;
+    }
+    @media (max-width: 1000px) {
+      main{
+        width: 80%;
+      }
+      .box{
+      top: 30%;
+      left: -26%;
+    }
+    }
+    @media (max-width: 700px) {
+      main{
+        width: 80%;
+        padding: 2%;
+        margin-top: 30%;
+      }
+      .d-flex{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .w-50{
+        width: 100% !important;
+      }
+      .mobile{
+        display: block;
+        width: 100%;
+        padding-bottom: 25px;
+        margin-top: -50%;
+        background: url(./images/bg-pattern-mobile.svg);
+        background-size: contain;
+      }
+      .desktop{
+        display: none;
+      }
+      h1{
+        text-align: center;
+      }
+    }
+  
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="mb-4 d-flex">
+    <section class="desktop">
+      <img src="./images/illustration-box-desktop.svg" alt="" class="img-fluid box">
+      <div class="woman-img">
+        <img src="./images/illustration-woman-online-desktop.svg" alt="" class="img-fluid">
+      </div>
+    </section>
+    <div class="mobile">
+      <img src="./images/illustration-woman-online-mobile.svg" alt="" class="img-fluid">
+    </div>
+    <aside class="w-50">
+      <h1 class="fw-bold">FAQ</h1>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" >
+              How many team members can I invite?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">You can invite up to 2 additional users on the Free plan. There is no limit on 
+              team members for the Premium plan.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              What is the maximum file upload size?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">No more than 2GB. All files in your account must fit your allotted storage space.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              How do I reset my password?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"> Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              How do I reset my password?
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Can I cancel my subscription?
+              Yes! Send us a message and we’ll process your request no questions asked.        
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">  
+              Do you provide additional support?
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Chat and email support is available 24/7. Phone lines are open during normal business hours.    
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
